@@ -54,6 +54,13 @@ hr {
 	border-color: var(--GrayishBlue);
 }
 
+.dividerDesktop {
+	margin-bottom: 25px
+}
+.dividerMobile {
+	display: none;
+}
+
 button {
 	width: 64px;
 	height: 64px;
@@ -64,10 +71,25 @@ button {
 	border-radius: 50%;
 	background-color: var(--NeonGreen);
 	position: absolute;
-	bottom: -25px;
+	bottom: -2rem;
 	cursor: pointer;
 	transition: 0.2s;
 }
 button:hover {
 	background-color: hsl(150, 100%, 50%);
+}
+
+@media only screen and (max-width: 900px) {
+	.dividerDesktop {
+		display: none;
+	}
+	.dividerMobile {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.card {
+		width: 400px;
+	}
 }
